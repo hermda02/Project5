@@ -164,7 +164,7 @@ void ExplicitSolver(int n, double alpha,double tsize, double tsteps,double toler
 			A(0,i) = 0.0;
 			A(i,0) = 0.0;
 			A(n-1,i) = 1.0;
-			A(i,n-1) = 0.0;
+			A(i,n-1) = 1.0;
 		}
 		JacobiSolver(n,tsize,alpha,A,Aold,q,tolerance);
 	}
