@@ -71,8 +71,8 @@ int main(int argc, char* argv[]){
 	cout << "X step size: " << xsize << endl;
 	cout << "Time steps: " << tsteps << endl;
  
-// --------------Inputs Finished-----------------------
-// ------------Initial Conditions----------------------
+	// --------------Inputs Finished-----------------------
+	// ------------Initial Conditions----------------------
 
 	int n = 1/xsize;
 
@@ -80,9 +80,8 @@ int main(int argc, char* argv[]){
 	double diag =0;
 	double offdia =0;
 
-// Diffusion Equation Solvers
+	// Diffusion Equation Solvers
 
-	string fileout = filename;
 	if (style == 1){
 		cout << "Forward Euler Method" << endl;
 		string fileout = filename;
@@ -192,7 +191,7 @@ void ForwardEuler(int n, int tsteps, double xsize, double alpha){
 		}
 		if (t % 5 ==0){
 			for (int i=1;i<n;i++){
-				ofile << setw(15) << setprecision(8) << u(i);
+				ofile << setw(15) << setprecision(4) << u(i);
 			}
 			ofile << endl;
 		}
@@ -231,7 +230,7 @@ void BackwardEuler(int n, int tsteps, double xsize, double alpha){
 		}
 		if (t % 5 ==0){
 			for (int i=1;i<n;i++){
-				ofile << setw(15) << setprecision(8) << u(i);
+				ofile << setw(15) << setprecision(4) << u(i);
 			}
 			ofile << endl;
 		}
@@ -267,7 +266,7 @@ void CrankNicol(int n, int tsteps, double xsize, double alpha){
 		//TriSolver(n,diag,offdia,alpha,u);
 		if (t % 5 ==0){
 			for (int i=1;i<n;i++){
-				ofile << setw(15) << setprecision(8) << u(i);
+				ofile << setw(15) << setprecision(4) << u(i);
 			}
 			ofile << endl;
 		}

@@ -3,7 +3,7 @@ import numpy as np
 import itertools
 import csv
 
-name = 'one_dim_forward.txt'
+name = 'test_forward.txt'
 
 x=[]
 v1 = []
@@ -36,7 +36,7 @@ with open(name,'r') as csvfile:
 		v1.append(float(y[108:119]))
 		v1.append(float(y[123:134]))
 
-name1 = 'one_dim_backward.txt'
+name1 = 'test_backward.txt'
 
 v2 = []
 
@@ -54,7 +54,7 @@ with open(name1,'r') as csvfile1:
 		v2.append(float(z[108:119]))
 		v2.append(float(z[123:134]))
 
-name2 = 'one_dim_crank.txt'
+name2 = 'test_crank.txt'
 
 v3 = []
 

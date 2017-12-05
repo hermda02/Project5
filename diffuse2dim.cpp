@@ -149,7 +149,7 @@ void ExplicitSolver(int n, double alpha,double tsize, double tsteps,double toler
 		q(n-1,i) = 1.0;
 	}
 
-	cout << q << endl;
+	// cout << q << endl;
 
 	for (int t =1;t<tsteps;t++){
 		//  Initialize the "old" matrix. Make a guess at the values
@@ -174,8 +174,7 @@ void ExplicitSolver(int n, double alpha,double tsize, double tsteps,double toler
 		}
 		ofile << endl;
 	}
-
-	cout << A << endl;
+	// cout << A << endl;
 }
 
 void JacobiSolver(int n,double dt,double alpha, mat &A, mat &Aold, mat &q, double abstol){
