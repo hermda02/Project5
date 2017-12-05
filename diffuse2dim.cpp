@@ -146,7 +146,7 @@ void ExplicitSolver(int n, double alpha,double tsize, double tsteps,double toler
 
 	// Source term matrix -- heat comes from the bottom of the box
 	for (int i=0;i<n;i++){
-		q(n-1,i) = 1.0;
+		q(n-1,0) = 1.0;
 	}
 
 	// cout << q << endl;
@@ -162,9 +162,9 @@ void ExplicitSolver(int n, double alpha,double tsize, double tsteps,double toler
 		//  Boundary Contions, the lower boundary is equal to one.
 		for (int i=0;i<n;i++){
 			A(0,i) = 0.0;
-			A(i,0) = 0.0;
-			A(n-1,i) = 1.0;
-			A(i,n-1) = 1.0;
+			//A(i,0) = 0.0;
+			//A(n-1,i) = 1.0;
+			A(i,n-1) = 0.0;
 		}
 		JacobiSolver(n,tsize,alpha,A,Aold,q,tolerance);
 	}
